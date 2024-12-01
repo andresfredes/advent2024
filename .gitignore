@@ -1,0 +1,20 @@
+# Dev environment
+env/
+dev/
+
+# Config
+.env
+
+# Build
+*.egg-info/
+
+# Python
+__pycache__/
+
+# Generated files
+logs/*
+results/*
+data/*
+
+# Git
+!.gitkeep
