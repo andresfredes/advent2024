@@ -10,6 +10,7 @@ dev/
 
 # Python
 __pycache__/
+.mypy_cache
 
 # Generated files
 logs/*
