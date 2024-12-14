@@ -75,10 +75,10 @@ class Node:
             return 1
         if len(self.children) == 0:
             return 0
-        end_locations = 0
+        complete_paths = 0
         for c in self.children:
-            end_locations += c.get_num_paths()
-        return end_locations
+            complete_paths += c.get_num_paths()
+        return complete_paths
 
     def __str__(self):
         return f"{self.x}-{self.y}"
@@ -119,8 +119,6 @@ def check_all_neighbours(data, loc):
 
 def is_valid_location(data, x, y):
     if y >= len(data) or y < 0 or x >= len(data[0]) or x < 0:
-        return False
-    if y == 0 and x == 0:
         return False
     if data[y][x] == ".":
         return False
