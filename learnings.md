@@ -22,4 +22,5 @@ All of my issues with this were due to not paying close enough attention to the 
 All test cases pass, but not the true case. The issue was surprisingly difficult to track down as only the true input data set was failing. The difference turned out to be only 4 paths out of nearly 2000. The issue was that at some point during part one I had added a check for the [0,0] position to always return false. I cannot remember why I did this, but it was this self-sabotage that was causing the issues. The algorithm was correct.
 
 # Day 11 - part 2
-It looks like brute forcing this will not work in reasonable time. Revising code.
+Initial implementation was much too slow. My second was just a minor speed improvement on the first, and still ultimately infeasible. Third attempt is significantly better, but I need a way to avoid redoing the same lookups for different counts.
+My ultimately correct solution was lightning fast. I realised that in the earlier attempts I was attempting to preserve the order of the stones, even though the final answer did not actually require it.
